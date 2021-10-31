@@ -1,6 +1,5 @@
 #include "iostream"
 #include "string"
-using std::cout;
 
 void print(){
 
@@ -13,7 +12,7 @@ void print(){
     if (std::string::npos != text.find(word)){
         std::cout << "first index - "  << text.find(word) << " last index - " << text.find(word) - 1 + word.length();
     } else {
-        cout << " 404 ";
+        std::cout << " 404 ";
     }
 }
 
