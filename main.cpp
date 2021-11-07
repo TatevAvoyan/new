@@ -4,11 +4,14 @@
 void test(std::string word){
     std::string test = "Lorem Ipsum is simply dummy ... Lorem Ipsum";
 
-    if (std::string::npos != test.find(word)){
-        std::cout << test.find(word) << "\n";
-        std::cout << test.find_last_not_of(word);
-    } else  {
-        std::cout << "chi gtel";
+    for(int i = 0; i < test.find(word); i++ ){
+        if (std::string::npos != test.find(word)){
+            test.replace(test.find(word), word.size(), "");
+
+        } else  {
+            std::cout << "chi gtel";
+        }
+        std::cout << i;
     }
 }
 
