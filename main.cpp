@@ -1,25 +1,35 @@
 #include "iostream"
 #include "cstring"
 
-int test(std::string word){
-    std::string test = "Lorem Ipsum is simply dummy ... Lorem Ipsum Lorem Ipsum is Lorem Ipsum is Lorem Ipsum is\"";
-    int j = word.length();
-    int i;
-    for(i = 0; i < j; i++){
-        if (std::string::npos != test.find(word)){
-            std::cout << "Index: " << test.find(word) << "\n";
-            test.replace(test.find(word), word.size(), "ipsum");
-        } else {
-            std::cout << "chi gtel\n";
-        }
-        std::cout <<  "i: " << i << "\n";
+//version 1
+int test0(std::string word) {
+    std::string test = "Ipsum Lorem Ipsum is simply dummy ... Lorem Ipsum Ipsum Lorem Ipsum is Lorem Ipsum is Lorem Ipsum Ipsum is";
+    int i = 0;
+    while(std::string::npos != test.find(word)) {
+        std::cout << i + 1 << " Index: " << test.find(word) << "\n";
+        test.replace(test.find(word), word.size(), "ipsum");
+        i++;
     }
     return i;
 }
 
-void text(std::string word) {
+// version 2
+void test(std::string word){
+    std::string test = "Ipsum Lorem Ipsum is simply dummy ... Lorem Ipsum Ipsum Lorem Ipsum is Lorem Ipsum is Lorem Ipsum Ipsum is";
+    int j = test.length();
+    int i;
+    for(i = 0; i < j; i++){
+        if (std::string::npos != test.find(word)){
+            std::cout << i + 1 << " Index: " << test.find(word) << "\n";
+            test.replace(test.find(word), word.size(), "ipsum");
+        }
+    }
+}
 
-    std::string test = "Lorem Ipsum is simply dummy ... Lorem Ipsum Lorem Ipsum is Lorem Ipsum is Lorem Ipsum is";
+// version 3
+int text(std::string word) {
+
+    std::string test = "Ipsum Lorem Ipsum is simply dummy ... Lorem Ipsum Ipsum Lorem Ipsum is Lorem Ipsum is Lorem Ipsum Ipsum is";
     int search_w_length = word.length();
     int i = test.find(word);
 
@@ -35,15 +45,19 @@ void text(std::string word) {
         }
         i++;
     }
+    return i;
 }
 
 
 int main() {
 
-    int i = test("Ipsum");
-    std::cout << "The word is used " << i << " times" ;
+    int i = test0("Ipsum");
+    std::cout << "Version 1: The word is used " << i << " times\n" ;
 
-//    text("Ipsum");
+    test("Ipsum");
+
+  /*  int k = text("Ipsum");
+    std::cout << "Version 2: The word is used " << j << " times" ;*/
 
     return 0;
 }
