@@ -1,3 +1,3 @@
-/home/tatev/Desktop/HomeWork/string/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/tatev/Desktop/HomeWork/string/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/tatev/Desktop/HomeWork/string/cmake-build-debug/CMakeFiles/string.dir
+/home/tatev/Desktop/HomeWork/CPP/string/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tatev/Desktop/HomeWork/CPP/string/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tatev/Desktop/HomeWork/CPP/string/cmake-build-debug/CMakeFiles/string.dir
